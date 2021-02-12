@@ -1,0 +1,50 @@
+
+// variables
+$primaryColor: #27a897;
+$mainBlack: #1b262c;
+$offWhite: #f7f7f7;
+$mainWhite: #fbf9fa;
+$darkGrey: #393e46;
+$mainTransition: all 0.3s linear;
+$mainSpacing: 3px;
+$lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+$darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+
+// interpolations
+$bg:"background";
+$txt-T:"text-transform";
+$fs:"font-size";
+$m:"margin";
+$p:"padding";
+$c:"color";
+
+// mixins
+@mixin txt-cplz(){
+    #{$txt-T}:capitalize;
+}
+
+@mixin letterSpace(){
+letter-spacing: $mainSpacing;
+}
+
+@mixin width100(){
+    width: 100%;
+}
+@mixin letterCplz {
+    @include txt-cplz;
+    @include letterSpace;
+}
+
+@mixin lg-width(){
+    width: 95vw;
+    max-width: 1170px;
+} 
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+

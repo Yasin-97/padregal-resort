@@ -1,0 +1,457 @@
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: $mainSpacing;
+  #{$c}: $mainWhite;
+  #{$bg}: $primaryColor;
+  #{$p}: 0.4rem 0.9rem;
+  border: 3px solid $primaryColor;
+  transition: $mainTransition;
+  #{$txt-T}: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    #{$bg}: transparent;
+    #{$c}: $primaryColor;
+  }
+}
+.loading {
+  @include txt-cplz;
+  text-align: center;
+  margin-top: 3rem;
+}
+.error {
+  text-align: center;
+  #{$txt-T}: uppercase;
+  #{$m}: 2rem 0;
+}
+.empty-search {
+  text-align: center;
+  @include txt-cplz;
+  #{$m}: 2rem 0;
+  #{$p}: 1rem;
+  letter-spacing: $mainSpacing;
+}
+/* end of globals */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  @include width100;
+  #{$p}: 0.75rem 2rem;
+  #{$bg}: $mainBlack;
+  z-index: 1;
+}
+.logo{
+  #{$c}:$primaryColor;
+  text-decoration: none;
+  h2{
+    margin-bottom: 0;
+  }
+  span{
+    margin-left: 10px;
+    #{$c}:$offWhite !important
+  }
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn {
+  #{$bg}: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.nav-icon {
+  #{$fs}: 1.5rem;
+  #{$c}: $primaryColor;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: $mainTransition;
+  list-style-type: none;
+  @media screen and (min-width: 768px) {
+    height: auto;
+    display: flex;
+    margin-left: 4rem;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    #{$p}: 1rem 0;
+    #{$c}: $mainWhite;
+    transition: $mainTransition;
+    text-align: center;
+    #{$fs}: 1rem;
+    font-weight: 600;
+    letter-spacing: $mainSpacing;
+    &:hover {
+      #{$c}: $primaryColor;
+    }
+    @media screen and (min-width: 768px) {
+      #{$m}: 0 1rem;
+      #{$p}: 0.5rem 0;
+    }
+  }
+}
+.show-nav {
+  height: 100px;
+}
+@media screen and (min-width: 768px) {
+  .nav-center {
+    max-width: 1170px;
+    #{$m}: 0 auto;
+    display: flex;
+  }
+}
+/* end of navbar */
+/* Hero */
+.defaultHero,
+.roomsHero {
+  min-height: calc(100vh - 66px);
+  #{$bg}: url("../images/defaultBcg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roomsHero {
+  #{$bg}: url("../images/room-4.jpg") center no-repeat;
+  min-height: 60vh;
+}
+/* End of Hero */
+/* Banner */
+.banner {
+  display: inline-block;
+  #{$bg}: rgba($darkGrey, 0.92);
+  #{$c}: $offWhite;
+  #{$p}: 2rem 1rem;
+  text-align: center;
+  @include txt-cplz;
+  letter-spacing: $mainSpacing;
+  @media screen and (min-width: 576px) {
+    #{$p}: 2rem 3rem;
+  }
+  @media screen and (min-width: 992px) {
+    #{$p}: 2rem 6rem;
+  }
+  h1 {
+    #{$fs}: 2.5rem;
+    @media screen and (min-width: 576px) {
+      #{$fs}: 3rem;
+    }
+    @media screen and (min-width: 992px) {
+      #{$fs}: 4rem;
+    }
+  }
+  div {
+    width: 10rem;
+    height: 5px;
+    #{$bg}: $primaryColor;
+    #{$m}: 1.7rem auto;
+  }
+  p {
+    #{$fs}: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* End of Banner */
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+
+  h4 {
+    #{$fs}: 2rem;
+    letter-spacing: $mainSpacing;
+    @include txt-cplz;
+    margin-bottom: 1rem;
+  }
+  div {
+    width: 5rem;
+    height: 5px;
+    #{$m}: 0 auto;
+    #{$bg}: $primaryColor;
+  }
+}
+
+/* end of Title */
+/* services */
+.services {
+  #{$p}: 5rem 0;
+  #{$bg}: $darkGrey;
+  text-align: center;
+
+  &-center {
+    width: 90vw;
+    #{$m}: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+  }
+
+  h6 {
+    letter-spacing: $mainSpacing;
+  }
+  p {
+    width: 80%;
+    #{$m}: 0 auto;
+    @media screen and (min-width: 1200px) {
+      @include width100;
+    }
+  }
+}
+.service span {
+  display: inline-block;
+  #{$c}: $primaryColor;
+  #{$fs}: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    @include lg-width;
+  }
+}
+
+/*end of services */
+/* featured rooms */
+.featured-rooms {
+  #{$p}: 5rem 0;
+  &-center {
+    width: 80vw;
+    #{$m}: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+    @media screen and (min-width: 776px) {
+      width: 90vw;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    }
+    @media screen and (min-width: 992px) {
+     @include lg-width;
+    }
+  }
+}
+
+/* end pf featured rooms */
+/* room */
+.room {
+  box-shadow: $lightShadow;
+  transition: $mainTransition;
+  &:hover {
+    box-shadow: $darkShadow;
+  }
+  &-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: all 0.3s linear;
+  }
+  &-info {
+    #{$bg}: $darkGrey;
+    @include txt-cplz;
+    #{$p}: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: $mainSpacing;
+  }
+}
+.img-container {
+  position: relative;
+  &:hover {
+    #{$bg}: rgba(0, 0, 0, 0.8);
+    img {
+      opacity: 0.3;
+    }
+    .price-top {
+      opacity: 0;
+    }
+    .room-link {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  img {
+    @include width100;
+    display: block;
+    transition: $mainTransition;
+  }
+}
+.price-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  #{$bg}: rgba(0, 0, 0, 0.8);
+  #{$c}: $mainWhite;
+  #{$p}: 0.3rem 0.6rem 0.5rem;
+  border-bottom-right-radius: 1rem;
+  #{$fs}: 0.5rem;
+  text-align: center;
+  transition: $mainTransition;
+  h6 {
+    margin-bottom: 0;
+    #{$fs}: 0.9rem;
+    font-weight: 300;
+    letter-spacing: $mainSpacing;
+  }
+}
+
+/* end of room  */
+/* single room*/
+.single-room {
+  #{$p}: 5rem 0 0 0;
+  &-images {
+    width: 85vw;
+    #{$m}: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+
+    @media screen and (min-width: 992px) {
+      @include lg-width;
+    }
+    img {
+      @include width100;
+      display: block;
+    }
+  }
+  &-info {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    #{$m}: 2rem auto;
+    @media screen and (min-width: 992px) {
+      @include lg-width;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+    }
+  }
+}
+.desc {
+  #{$m}: 1rem 0;
+  h3 {
+    @include letterCplz;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+.info {
+  #{$m}: 1rem 0;
+  @media screen and (min-width: 992px) {
+    padding-left: 3rem;
+  }
+  h3,
+  h6 {
+    @include letterCplz;
+  }
+  h6 {
+    font-weight: 300;
+  }
+}
+.room-extras {
+  width: 80vw;
+  #{$m}: 0 auto 3rem auto;
+  @media screen and (min-width: 992px) {
+    @include lg-width;
+  }
+  h6 {
+    @include letterCplz;
+  }
+}
+.extras {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+
+/* end of single room*/
+/* roomlist */
+.roomslist {
+  #{$p}: 5rem 0;
+  &-center {
+    width: 80vw;
+    #{$m}: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+    @media screen and (min-width: 776px) {
+      width: 90vw;
+    }
+    @media screen and (min-width: 992px) {
+      @include lg-width;
+    }
+  }
+}
+
+/* end of roomlist */
+/*  rooms fitler*/
+.filter-container {
+  #{$p}: 5rem 0;
+}
+.filter-form {
+  width: 60vw;
+  #{$m}: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+  @media screen and (min-width: 776px) {
+    width: 70vw;
+  }
+  @media screen and (min-width: 992px) {
+    @include lg-width;
+  }
+}
+.form-group {
+  @include txt-cplz;
+  label {
+    display: block;
+    letter-spacing: $mainSpacing;
+    margin-bottom: 0.5rem;
+  }
+}
+.form-control {
+  @include width100;
+  #{$bg}: transparent;
+  // border: offWhite 1px solid;
+  #{$c}:$mainWhite;
+  #{$fs}: 1rem;
+  border-radius: 0.3rem;
+  #{$p}: 0.2rem;
+}
+.size-inputs {
+  display: flex;
+
+}
+.size-input {
+  width: 40%;
+  #{$p}: 0.2rem;
+  border: 1px solid $mainWhite;
+  border-radius: 0.3rem;
+  margin-right: 0.3rem;
+  #{$bg}:$mainBlack;
+  #{$c}: $offWhite;
+}
+.single-extra label {
+  display: inline-block;
+  #{$fs}: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+/* end of rooms fitler*/
