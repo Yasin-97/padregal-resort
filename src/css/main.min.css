@@ -28,9 +28,9 @@
 
 .nav-icon { font-size: 1.5rem; color: #27a897; }
 
-.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 0; overflow: hidden; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; list-style-type: none; }
+.nav-links { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 0; overflow: hidden; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; list-style-type: none;flex-direction: column; }
 
-@media screen and (min-width: 768px) { .nav-links { height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; margin-left: 4rem; } }
+@media screen and (min-width: 768px) { .nav-links { height: auto; display: -webkit-box; display: -ms-flexbox; display: flex; margin-left: 4rem;flex-direction: row; } }
 
 .nav-links a { display: block; text-decoration: none; padding: 1rem 0; color: #fbf9fa; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; text-align: center; font-size: 1rem; font-weight: 600; letter-spacing: 3px; }
 
