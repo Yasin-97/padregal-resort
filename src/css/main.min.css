@@ -50,7 +50,7 @@
 
 /* End of Hero */
 /* Banner */
-.banner { display: inline-block; background: rgba(57, 62, 70, 0.92); color: #f7f7f7; padding: 2rem 1rem; text-align: center; text-transform: capitalize; letter-spacing: 3px; }
+.banner { display: inline-block; background: rgba(57, 62, 70, 0.8); color: #f7f7f7; padding: 2rem 1rem; text-align: center; text-transform: capitalize; letter-spacing: 3px; }
 
 @media screen and (min-width: 576px) { .banner { padding: 2rem 3rem; } }
 
