@@ -450,6 +450,10 @@
   #{$bg}:$mainBlack;
   #{$c}: $offWhite;
 }
+.single-extra{
+  display: flex;
+  align-items: center;
+}
 .single-extra label {
   display: inline-block;
   #{$fs}: 0.8rem;
