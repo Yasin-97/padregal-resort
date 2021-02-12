@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.btn-primary { display: inline-block; text-decoration: none; letter-spacing: 3px; color: #fbf9fa; background: red; padding: 0.4rem 0.9rem; border: 3px solid #27a897; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; text-transform: uppercase; cursor: pointer; }
+.btn-primary { display: inline-block; text-decoration: none; letter-spacing: 3px; color: #fbf9fa; background: #27a897; padding: 0.4rem 0.9rem; border: 3px solid #27a897; -webkit-transition: all 0.3s linear; transition: all 0.3s linear; text-transform: uppercase; cursor: pointer; }
 
 .btn-primary:hover { background: transparent; color: #27a897; }
 
